@@ -1,4 +1,4 @@
-function Mode(){
+function niggerMode(){
     const loan = document.getElementById('loan').value
     let income = parseFloat(document.getElementById('income').value)
     const cb1 = document.getElementById('cb1')
