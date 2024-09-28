@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Form</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+<body>
+  
+<ion-app>
+    <!-- Header -->
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Food Delivery Form</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <!-- Content -->
+    <ion-content>
+        <!-- Delivery Address -->
+        <ion-item>
+            <ion-label position="floating"> Delivery Address</ion-label> &nbsp;
+            <ion-input 
+            id="delivery_address"
+            ></ion-input>
+        </ion-item>
+
+        <!-- Select Payment Method -->
+        <ion-list>
+            <ion-item>
+                <ion-label>Payment Method</ion-label>&nbsp;&nbsp;
+                <ion-select id="payment_method" placeholder="Credit Card">
+                    <ion-select-option value="Credit Card">Credit Card</ion-select-option>
+                    <ion-select-option value="Paypal">Paypal</ion-select-option>
+                    <ion-select-option value="Cash on Hand">Cash on Hand</ion-select-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+
+        <!-- Save Payment Method -->
+         <ion-list>
+            <ion-item>
+                <ion-label>Save Payment Method</ion-label> &nbsp;&nbsp;&nbsp;&nbsp;
+                <ion-checkbox id="saved_payment"></ion-checkbox>
+            </ion-item>
+         </ion-list>
+
+
+         <!-- Food Price -->
+          <ion-item>
+            <ion-label position="floating">Food Price</ion-label> &nbsp;
+            <ion-input id="food_price"></ion-input>
+          </ion-item>
+        <br> 
+
+        
+        <!-- Button -->
+        <ion-button expand="block" onclick="submitOrder()" color="primary">SUBMIT ORDER</ion-button>
+        <!-- Result -->
+        <div id="res" style="display: none;">
+
+            <p>Address: <span id="address_res"></span></p>
+            <p id="payment_label">Payment Method: <span id="payment_res"></span></p>
+            <p id="cash_show" style="display: none;"><span>Payment Method: 'Cash on Hand [Amount]' <input type="number" style="display: inline;"></span></p>
+            <p><span id="saved_payment_res"></span></p>
+            <p id="food_has_value">Food Price: <span id="food_price_res"></span></p>
+
+        </div>
+
+
+    </ion-content>
+</ion-app>
+
+<script src="app.js"></script>
+</body>
+</html>
