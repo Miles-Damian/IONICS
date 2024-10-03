@@ -24,6 +24,7 @@ function niggerMode(){
     document.getElementById('res_price').textContent = price_id
     
     document.getElementById('disContent').style.display = "block"
+    let discounted_price = price_id * .10
 
     
    if(discount_confirm == "Yes"){
@@ -36,7 +37,7 @@ function niggerMode(){
     if(discount_code.trim() != "" && discount_code == "DISCOUNT10"){
         
         document.getElementById("res_code").textContent = discount_code
-        document.getElementById('res_total_amount').textContent = (price_id*0.10).toFixed(2)
+        document.getElementById('res_total_amount').textContent = (price_id - discounted_price).toFixed(2)
     }
     else if(discount_code != "DISCOUNT10"){
         document.getElementById("res_code").textContent = "Invalid Discount Code"
